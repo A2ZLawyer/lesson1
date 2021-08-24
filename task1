@@ -1,0 +1,26 @@
+using System;
+
+namespace task1
+{
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            Console.Write("Запрашиваемое количество итераций цикла: ");
+            int cicle = Convert.ToInt32(Console.ReadLine());
+            var i = 1;
+            while (i <= cicle)
+            {
+                if (i % 3 == 0 && i % 5 == 0) System.Console.Write("FizzBuzz, ", i++);
+                if (i % 3 == 0) System.Console.Write("Fizz, ", i++);
+                if (i % 5 == 0) System.Console.Write("Buzz, ", i++);
+                else Console.Write(i++ + ", ");
+                if (i >= 100) System.Console.Write("предельное число выводимых итераций цикла равно 100");
+                if (i >= 100)
+                {
+                    break;
+                }
+            }
+        }
+    }
+}
